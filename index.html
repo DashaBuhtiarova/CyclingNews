@@ -14,9 +14,11 @@
         <nav>
             <div class="logo">Cycling<span>News</span></div>
             <ul>
-                <li><a href="#base">Main</a></li>
-                <li><a href="#terms">New</a></li>
-                <li><a href="#about">About project</a></li>
+                <li><a href="index.html">Main</a></li>
+                <li><a href=#>New</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#prog">Program</a></li>
+                <li><a href="#guests">Guests</a></li>
             </ul>
         </nav>
     </header>
@@ -46,6 +48,143 @@
                 </div>
             </div>
         </section>
+        <section id="program" class="program-section">
+    <div class="section-title">
+        <h2>Race <span>Program</span></h2>
+        <p>Two intense stages at the STC Sokol circuit</p>
+    </div>
+    
+    <div class="program-container" id="prog">
+        <div class="program-card">
+            <div class="card-header">
+                <span class="stage-badge">Stage 1</span>
+                <span class="card-time">09:00 AM</span>
+            </div>
+            <h3>Time Trial (Individual)</h3>
+            <p class="card-desc">
+                An intense individual race against the clock. Riders start one by one to set the fastest lap time on the high-speed Sokol circuit geometry.
+            </p>
+            <div class="card-footer">
+                <span class="card-meta"><strong>Distance:</strong> 20 km</span>
+                <span class="card-meta"><strong>Track:</strong> Short Ring</span>
+            </div>
+        </div>
+
+        <div class="program-card animate-card">
+            <div class="card-header">
+                <span class="stage-badge">Stage 2</span>
+                <span class="card-time">02:30 PM</span>
+            </div>
+            <h3>Criterium (Group Race)</h3>
+            <p class="card-desc">
+                A thrilling multi-lap group race full of tactics and speed. The ultimate test of endurance and sprinting skills on the final straight.
+            </p>
+            <div class="card-footer">
+                <span class="card-meta"><strong>Distance:</strong> 50 km</span>
+                <span class="card-meta"><strong>Track:</strong> Main Circuit</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="guests" class="guests-section">
+    <div class="section-title">
+        <h2>Special <span>Guests</span></h2>
+        <p>Meet the cycling legends and race ambassadors joining us at STC Sokol</p>
+    </div>
+
+    <div class="guests-container">
+        <div class="guest-card">
+            <div class="guest-image-wrapper">
+                <img src="images/гость.jpg" alt="Alexander Vinokourov" class="guest-img">
+            </div>
+            <div class="guest-info">
+                <h3>Alexander Vinokourov</h3>
+                <span class="guest-badge">Olympic Champion</span>
+                <p class="guest-bio">
+                    Kazakhstan's cycling legend, 2012 Olympic Gold Medalist, and General Manager of Astana Qazaqstan Team.
+                </p>
+            </div>
+        </div>
+
+        <div class="guest-card">
+            <div class="guest-image-wrapper">
+                <img src="images/гость2.jpg" alt="Mark Cavendish" class="guest-img">
+            </div>
+            <div class="guest-info">
+                <h3>Sir Mark Cavendish</h3>
+                <span class="guest-badge">TDF Record Holder</span>
+                <p class="guest-bio">
+                    The greatest sprinter in cycling history, World Champion, and legendary rider of Astana Qazaqstan Team.
+                </p>
+            </div>
+        </div>
+
+        <div class="guest-card">
+            <div class="guest-image-wrapper">
+                <img src="images/гость3.jpeg" alt="Peter Sagan" class="guest-img">
+            </div>
+            <div class="guest-info">
+                <h3>Peter Sagan</h3>
+                <span class="guest-badge">3x World Champion</span>
+                <p class="guest-bio">
+                    Three-time consecutive World Champion and one of the most charismatic superstars in modern cycling.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="logo">Cycling<span>News</span></div>
+                <p>The ultimate cycling event at the STC Sokol circuit. Speed, endurance, and adrenaline combined in one spectacular race.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#base">Main</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#guests">Guests</a></li>
+                    <li><a href="#about">About Project</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <p>Stay updated with the latest cycling news and race results.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Telegram</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CyclingNews & STC Sokol. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    document.querySelectorAll('nav a, footer a, .btn').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            
+            // Проверяем, что ссылка действительно якорная (начинается с #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
