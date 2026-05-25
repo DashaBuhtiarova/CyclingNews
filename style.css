@@ -166,3 +166,479 @@ nav ul li a:hover { color: var(--accent); }
     margin-bottom: 15px;
     color: #dfdfdf;
 }
+/* --- Program Section Styles --- */
+.program-section {
+    padding: 80px 10%;
+    /* Добавляем изображение на фон вместе с градиентом-подложкой для читаемости */
+    background: linear-gradient(180deg, rgba(35, 39, 83, 0.85) 0%, rgba(32, 36, 79, 0.92) 100%), 
+                url('images/6310407_0001s_0002s_0004_Grid.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Сетка будет плавно прокручиваться вместе с контентом */
+    
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title h2 span {
+    color: var(--accent); /* Твой фирменный синий акцент */
+    text-shadow: 0 0 15px rgba(12, 69, 192, 0.6);
+}
+
+.section-title p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+}
+
+/* Контейнер для карточек */
+.program-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Стили карточки программы */
+.program-card {
+    background: #1a1d3a; /* Чуть более светлый оттенок синего для контраста */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+    position: relative;
+}
+
+/* Эффект при наведении на карточку */
+.program-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(12, 69, 192, 0.25);
+}
+
+/* Верхняя строчка карточки */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stage-badge {
+    background: var(--accent);
+    color: #ffffff;
+    padding: 5px 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.card-time {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Текст внутри карточки */
+.program-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card-desc {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Чтобы нижние блоки были на одном уровне */
+}
+
+/* Футер карточки с параметрами гонки */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    font-size: 0.9rem;
+}
+
+.card-meta {
+    color: var(--text-main);
+}
+
+.card-meta strong {
+    color: var(--text-dim);
+}
+/* --- Special Guests Section --- */
+.guests-section {
+    padding: 80px 10%;
+    background-color: #1a1d3a; /* Контрастный фон относительно черного и основного синего */
+}
+
+.guests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Карточка гостя */
+.guest-card {
+    background: var(--bg-color); /* Используем твой основной синий цвет для внутренности */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.guest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(12, 69, 192, 0.3);
+}
+
+/* Контейнер для фото (чтобы все картинки были одинакового размера) */
+.guest-image-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #111; /* Заглушка, пока нет картинок */
+}
+
+.guest-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото красиво заполняет блок без искажений */
+    transition: transform 0.5s ease;
+}
+
+.guest-card:hover .guest-img {
+    transform: scale(1.05); /* Легкий зум фото при наведении */
+}
+
+/* Информационный блок */
+.guest-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.guest-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Красивый бейдж с титулом */
+.guest-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.guest-bio {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/* --- Footer Styles --- */
+footer {
+    background-color: rgb(15, 17, 34); /* Делаем фон чуть темнее, чем основной синий, для эффекта завершенности */
+    color: var(--text-main);
+    padding: 60px 10% 20px 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Первый блок: Логотип и описание */
+.footer-info .logo {
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Заголовки в футере */
+footer h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Второй блок: Ссылки */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--accent);
+    padding-left: 5px; /* Легкий интерактивный сдвиг вправо при наведении */
+}
+
+/* Третий блок: Соцсети */
+.footer-socials p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.social-icon:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 10px rgba(12, 69, 192, 0.4);
+}
+
+/* Копирайт */
+.footer-bottom {
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}:root {
+    --bg-color: #232753;
+    --card-bg: #1e1e1e;
+    --accent: #0c45c0;
+    --text-main: #e0e0e0;
+    --text-dim: #b0b0b0;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+header {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(21, 23, 46);
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span { color: var(--accent); }
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 20px; }
+
+nav ul li a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--accent); }
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+.hero-bike {
+    position: absolute;
+
+    right: 5%;
+    bottom: -100px;
+
+    height: 900px;
+
+    z-index: 1;
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+.hero-bike1 {
+    position: absolute;
+
+    right: 5%;
+    bottom: -100px;
+
+    height: 900px;
+
+    z-index: 1;
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: floatTitle 2s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero h1 span { color: var(--accent); }
+
+.btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--accent);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+
+.btn:hover { transform: translateY(-5px);background: #0d1897; }
+
+.about-section {
+    font-family: 'Orbitron', sans-serif;
+    padding: 80px 10%;
+    background-color: #1d1d1d;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 350px;
+    height: 650px;
+    animation: velosiped 2s ease-in-out infinite;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    
+}
+
+@keyframes velosiped {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2414b3;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #dfdfdf;
+}
